@@ -23,7 +23,7 @@ $(document).ready(function () {
         var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
         var days = Math.floor(t / (1000 * 60 * 60 * 24));
 
-        $('.days').text(('0' + days).slice(-2));
+        $('.days').text(days.toString().padStart(2, '0'));
         $('.hours').text(('0' + hours).slice(-2));
         $('.minutes').text(('0' + minutes).slice(-2));
         $('.seconds').text(('0' + seconds).slice(-2));
